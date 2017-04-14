@@ -23,7 +23,7 @@
     "safe-access": "^0.1.0",
     "sync-request": "^4.0.2",
     "typography": "^0.15.8",
-    "typography-theme-wordpress-2016": "^0.15.1",
+    "typography-theme-stern-grove": "^0.15.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {

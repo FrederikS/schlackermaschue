@@ -1,7 +1,12 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import SternGrove from 'typography-theme-stern-grove'
 
-const typography = new Typography(Wordpress2016)
+SternGrove.headerColor = 'hsla(0,0%,0%,0.65)'
+SternGrove.bodyFontFamily = ['Open Sans', 'MundoSans', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif']
+SternGrove.baseFontSize = '20.00px'
+SternGrove.baseLineHeight = 1.30
+SternGrove.bodyColor = 'hsla(0,0%,0%,0.55)'
+const typography = new Typography(SternGrove)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
