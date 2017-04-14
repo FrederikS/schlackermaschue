@@ -15,8 +15,10 @@
     "moment": "^2.18.1",
     "node-sass": "^4.5.2",
     "prop-types": "^15.5.8",
+    "react": "15.5.4",
     "react-helmet": "^5.0.3",
     "react-responsive-grid": "^0.3.3",
+    "react-router": "2.8.1",
     "react-typography": "^0.15.0",
     "recursive-readdir": "^2.1.0",
     "rimraf": "^2.6.1",
@@ -27,7 +29,13 @@
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "gh-pages": "^0.12.0",
+    "prettier-eslint": "^5.1.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -41,10 +49,15 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "gatsby build && node ampify.js",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    }
   }
 }

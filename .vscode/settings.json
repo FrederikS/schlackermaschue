@@ -1,0 +1,11 @@
+{
+    "eslint.enable": true,
+    "eslint.workingDirectories": [
+        "./components",
+        "./wrappers",
+        "./utils"
+    ],
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 100
+}
