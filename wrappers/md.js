@@ -5,6 +5,7 @@ import ReadNext from '../components/ReadNext'
 import { rhythm } from 'utils/typography'
 import { config } from 'config'
 import Bio from 'components/Bio'
+import PropTypes from 'prop-types'
 
 import '../css/zenburn.css'
 
@@ -41,7 +42,7 @@ class MarkdownWrapper extends React.Component {
 }
 
 MarkdownWrapper.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 }
 
 export default MarkdownWrapper

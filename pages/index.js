@@ -8,6 +8,7 @@ import access from 'safe-access'
 import { config } from 'config'
 import include from 'underscore.string/include'
 import Bio from 'components/Bio'
+import PropTypes from 'prop-types'
 
 class BlogIndex extends React.Component {
   render () {
@@ -50,7 +51,7 @@ class BlogIndex extends React.Component {
 }
 
 BlogIndex.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 }
 
 export default BlogIndex

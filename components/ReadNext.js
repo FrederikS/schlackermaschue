@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
 import { rhythm, scale } from 'utils/typography'
+import PropTypes from 'prop-types'
 
 class ReadNext extends React.Component {
   render () {
@@ -62,8 +63,8 @@ class ReadNext extends React.Component {
 }
 
 ReadNext.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
+  post: PropTypes.object.isRequired,
+  pages: PropTypes.array,
 }
 
 export default ReadNext

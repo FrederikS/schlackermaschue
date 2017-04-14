@@ -3,13 +3,14 @@ import Helmet from "react-helmet"
 import { prefixLink } from 'gatsby-helpers'
 import { GoogleFont, TypographyStyle } from 'react-typography'
 import typography from './utils/typography'
+import PropTypes from 'prop-types'
 
 const BUILD_TIME = new Date().getTime()
 
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
-    body: React.PropTypes.string,
+    body: PropTypes.string,
   },
   render () {
     const { body } = this.props
