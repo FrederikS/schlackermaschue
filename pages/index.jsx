@@ -1,3 +1,4 @@
+/* @flow */
 import React from 'react';
 import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
@@ -5,9 +6,9 @@ import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import access from 'safe-access';
+import { config } from 'config';
 import include from 'underscore.string/include';
 import { rhythm } from '../utils/typography';
-import { config } from '../config.toml';
 import Bio from '../components/Bio';
 
 const BlogIndex = ({ route }) => {

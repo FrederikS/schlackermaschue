@@ -1,8 +1,10 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/typography.*
+
 [include]
 
 [libs]
+<PROJECT_ROOT>/node_modules/iflow-react-router/index.js.flow
+./flow
 
 [options]
-module.name_mapper='!raw!\(.+\)$' -> '<PROJECT_ROOT>/node_modules/raw-loader'

@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';

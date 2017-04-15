@@ -16,5 +16,8 @@ module.exports = {
     ],
     "rules": {
         "prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true}],
+    },
+    "settings": {
+        "import/core-modules": [ "config" ]
     }
 };
