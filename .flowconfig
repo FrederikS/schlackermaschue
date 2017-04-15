@@ -1,0 +1,8 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/typography.*
+[include]
+
+[libs]
+
+[options]
+module.name_mapper='!raw!\(.+\)$' -> '<PROJECT_ROOT>/node_modules/raw-loader'

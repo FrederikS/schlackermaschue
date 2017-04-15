@@ -13,8 +13,10 @@ import Bio from '../components/Bio';
 const BlogIndex = ({ route }) => {
   const pageLinks = [];
   // Sort pages.
-  const sortedPages = sortBy(route.pages, page => access(page, 'data.date')).reverse();
-  sortedPages.forEach((page) => {
+  const sortedPages = sortBy(route.pages, page =>
+    access(page, 'data.date')
+  ).reverse();
+  sortedPages.forEach(page => {
     if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
       const title = access(page, 'data.title') || page.path;
       pageLinks.push(
@@ -24,8 +26,10 @@ const BlogIndex = ({ route }) => {
             marginBottom: rhythm(1 / 4),
           }}
         >
-          <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>{title}</Link>
-        </li>,
+          <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>
+            {title}
+          </Link>
+        </li>
       );
     }
   });
@@ -33,7 +37,10 @@ const BlogIndex = ({ route }) => {
     <div>
       <Helmet
         title={config.blogTitle}
-        meta={[{ name: 'description', content: 'Sample blog' }, { name: 'keywords', content: 'blog, articles' }]}
+        meta={[
+          { name: 'description', content: 'Sample blog' },
+          { name: 'keywords', content: 'blog, articles' },
+        ]}
       />
       <Bio />
       <ul>

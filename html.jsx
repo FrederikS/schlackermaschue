@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
@@ -7,10 +8,10 @@ import typography from './utils/typography';
 
 const BUILD_TIME = new Date().getTime();
 
-const App = ({ body }) => {
+const App = ({ body }: { body: string }): React.Element<any> => {
   const head = Helmet.rewind();
 
-  let css;
+  let css: React.Element<any>;
   if (process.env.NODE_ENV === 'production') {
     /* eslint-disable
     react/no-danger,
