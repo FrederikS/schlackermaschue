@@ -1,15 +1,19 @@
+/* @flow */
 import React from 'react';
 import moment from 'moment';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
+import { config } from 'config';
 import ReadNext from '../components/ReadNext';
 import { rhythm } from '../utils/typography';
-import { config } from '../config.toml';
 import Bio from '../components/Bio';
 
 import '../css/zenburn.css';
 
-const MarkdownWrapper = ({ route }) => {
+type Props = {
+  route: Route,
+};
+
+const MarkdownWrapper = ({ route }: Props): React.Element<any> => {
   const post = route.page.data;
 
   return (
@@ -36,10 +40,6 @@ const MarkdownWrapper = ({ route }) => {
       <Bio />
     </div>
   );
-};
-
-MarkdownWrapper.propTypes = {
-  route: PropTypes.object.isRequired,
 };
 
 export default MarkdownWrapper;

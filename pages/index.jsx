@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import access from 'safe-access';
 import { config } from 'config';
@@ -11,7 +10,11 @@ import include from 'underscore.string/include';
 import { rhythm } from '../utils/typography';
 import Bio from '../components/Bio';
 
-const BlogIndex = ({ route }) => {
+type Props = {
+  route: Route,
+};
+
+const BlogIndex = ({ route }: Props): React.Element<any> => {
   const pageLinks = [];
   // Sort pages.
   const sortedPages = sortBy(route.pages, page =>
@@ -49,10 +52,6 @@ const BlogIndex = ({ route }) => {
       </ul>
     </div>
   );
-};
-
-BlogIndex.propTypes = {
-  route: PropTypes.object.isRequired,
 };
 
 export default BlogIndex;

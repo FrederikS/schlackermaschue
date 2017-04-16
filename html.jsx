@@ -3,12 +3,15 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { GoogleFont, TypographyStyle } from 'react-typography';
-import PropTypes from 'prop-types';
 import typography from './utils/typography';
+
+type Props = {
+  body: string,
+};
 
 const BUILD_TIME = new Date().getTime();
 
-const App = ({ body }: { body: string }): React.Element<any> => {
+const App = ({ body }: Props): React.Element<any> => {
   const head = Helmet.rewind();
 
   let css: React.Element<any>;
@@ -54,10 +57,6 @@ const App = ({ body }: { body: string }): React.Element<any> => {
       </body>
     </html>
   );
-};
-
-App.propTypes = {
-  body: PropTypes.string.isRequired,
 };
 
 export default App;

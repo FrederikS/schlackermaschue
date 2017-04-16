@@ -1,12 +1,17 @@
+/* @flow */
 import React from 'react';
 import { Link } from 'react-router';
 import { Container } from 'react-responsive-grid';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
-import PropTypes from 'prop-types';
+import { config } from 'config';
 import { rhythm, scale } from '../utils/typography';
-import { config } from '../config.toml';
 
-const Template = ({ location, children }) => {
+type Props = {
+  location: RouterLocation,
+  children: React.Element<any>,
+};
+
+const Template = ({ location, children }: Props): React.Element<any> => {
   let header;
   if (location.pathname === prefixLink('/')) {
     header = (
@@ -61,11 +66,6 @@ const Template = ({ location, children }) => {
       {children}
     </Container>
   );
-};
-
-Template.propTypes = {
-  children: PropTypes.any.isRequired,
-  location: PropTypes.object.isRequired,
 };
 
 export default Template;

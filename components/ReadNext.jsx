@@ -1,12 +1,17 @@
+/* @flow */
 import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
-import PropTypes from 'prop-types';
 import { rhythm, scale } from '../utils/typography';
 
-const ReadNext = ({ pages, post }) => {
+type Props = {
+  pages: Page[],
+  post: Post,
+};
+
+const ReadNext = ({ pages, post }: Props): React.Element<any> => {
   const { readNext } = post;
   let nextPost;
   if (readNext) {
@@ -52,11 +57,6 @@ const ReadNext = ({ pages, post }) => {
       <hr />
     </div>
   );
-};
-
-ReadNext.propTypes = {
-  post: PropTypes.object.isRequired,
-  pages: PropTypes.array,
 };
 
 ReadNext.defaultProps = {

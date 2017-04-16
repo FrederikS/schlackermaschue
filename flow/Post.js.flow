@@ -1,0 +1,6 @@
+declare type Post = {
+  title: string,
+  date: string,
+  body: string,
+  readNext: string,
+};
