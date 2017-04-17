@@ -1,11 +1,8 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "gatsby-starter-blog-amp-fork",
+  "description": "Fork of Starter Gatsby Blog AMP",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "Frederik Steffen",
   "dependencies": {
     "cheerio": "^0.22.0",
     "gatsby": "^0.12.44",
@@ -41,15 +38,13 @@
     "gh-pages": "^0.12.0",
     "prettier-eslint": "^5.1.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "type": "git"
   },
   "scripts": {
     "dev": "gatsby develop",

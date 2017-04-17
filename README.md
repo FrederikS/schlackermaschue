@@ -1,4 +1,4 @@
-# gatsby-amp-starter-blog
+# Fork of gatsby-amp-starter-blog
 
 A gatsby starter for creating an AMP compliant blog.
 
