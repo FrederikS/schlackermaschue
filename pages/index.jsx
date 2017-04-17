@@ -7,7 +7,7 @@ import Helmet from 'react-helmet';
 import access from 'safe-access';
 import { config } from 'config';
 import include from 'underscore.string/include';
-import { rhythm } from '../utils/typography';
+import typography from '../utils/typography';
 import Bio from '../components/Bio';
 
 type Props = {
@@ -27,7 +27,7 @@ const BlogIndex = ({ route }: Props): React.Element<any> => {
         <li
           key={page.path}
           style={{
-            marginBottom: rhythm(1 / 4),
+            marginBottom: typography.rhythm(1 / 4),
           }}
         >
           <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>

@@ -4,7 +4,7 @@ import moment from 'moment';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import ReadNext from '../components/ReadNext';
-import { rhythm } from '../utils/typography';
+import typography from '../utils/typography';
 import Bio from '../components/Bio';
 
 import '../css/zenburn.css';
@@ -12,6 +12,8 @@ import '../css/zenburn.css';
 type Props = {
   route: Route,
 };
+
+const { rhythm } = typography;
 
 const MarkdownWrapper = ({ route }: Props): React.Element<any> => {
   const post = route.page.data;

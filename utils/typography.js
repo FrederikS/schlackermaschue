@@ -1,3 +1,4 @@
+/* @flow */
 import Typography from 'typography';
 import SternGrove from 'typography-theme-stern-grove';
 

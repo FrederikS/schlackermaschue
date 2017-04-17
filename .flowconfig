@@ -1,5 +1,6 @@
 [ignore]
-<PROJECT_ROOT>/node_modules/typography.*
+<PROJECT_ROOT>/node_modules/typography/.*
+<PROJECT_ROOT>/node_modules/typography-theme-stern-grove/.*
 
 [include]
 

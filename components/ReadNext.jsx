@@ -4,12 +4,14 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
-import { rhythm, scale } from '../utils/typography';
+import typography from '../utils/typography';
 
 type Props = {
   pages: Page[],
   post: Post,
 };
+
+const { rhythm, scale } = typography;
 
 const ReadNext = ({ pages, post }: Props): React.Element<any> => {
   const { readNext } = post;

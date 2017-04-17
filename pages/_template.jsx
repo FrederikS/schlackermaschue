@@ -4,12 +4,14 @@ import { Link } from 'react-router';
 import { Container } from 'react-responsive-grid';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { config } from 'config';
-import { rhythm, scale } from '../utils/typography';
+import typography from '../utils/typography';
 
 type Props = {
   location: RouterLocation,
   children: React.Element<any>,
 };
+
+const { rhythm, scale } = typography;
 
 const Template = ({ location, children }: Props): React.Element<any> => {
   let header;
