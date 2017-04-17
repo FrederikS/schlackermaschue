@@ -3,7 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { GoogleFont, TypographyStyle } from 'react-typography';
-import typography from './utils/typography';
+import typography from './src/utils/typography';
 
 type Props = {
   body: string,

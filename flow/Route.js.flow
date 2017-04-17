@@ -1,4 +1,5 @@
 type Page = {
+  path: string,
   data: Post,
 };
 

@@ -1,7 +1,10 @@
+/* @flow */
 import React from 'react';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
-import { config } from '../config.toml';
-import { rhythm } from '../utils/typography';
+import { config } from 'config';
+import typography from '../utils/typography';
+
+const { rhythm } = typography;
 
 const Bio = () => (
   <p

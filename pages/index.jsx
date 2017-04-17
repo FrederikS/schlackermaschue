@@ -1,57 +1,47 @@
 /* @flow */
 import React from 'react';
-import { Link } from 'react-router';
-import sortBy from 'lodash/sortBy';
-import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import Helmet from 'react-helmet';
-import access from 'safe-access';
 import { config } from 'config';
-import include from 'underscore.string/include';
-import typography from '../utils/typography';
-import Bio from '../components/Bio';
+import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
+import { Link } from 'react-router';
+import PostList from '../src/components/PostList';
+import typography from '../src/utils/typography';
 
 type Props = {
   route: Route,
 };
 
-const BlogIndex = ({ route }: Props): React.Element<any> => {
-  const pageLinks = [];
-  // Sort pages.
-  const sortedPages = sortBy(route.pages, page =>
-    access(page, 'data.date')
-  ).reverse();
-  sortedPages.forEach(page => {
-    if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
-      const title = access(page, 'data.title') || page.path;
-      pageLinks.push(
-        <li
-          key={page.path}
-          style={{
-            marginBottom: typography.rhythm(1 / 4),
-          }}
-        >
-          <Link style={{ boxShadow: 'none' }} to={prefixLink(page.path)}>
-            {title}
-          </Link>
-        </li>
-      );
-    }
-  });
-  return (
-    <div>
-      <Helmet
-        title={config.blogTitle}
-        meta={[
-          { name: 'description', content: 'Sample blog' },
-          { name: 'keywords', content: 'blog, articles' },
-        ]}
-      />
-      <Bio />
-      <ul>
-        {pageLinks}
-      </ul>
-    </div>
-  );
-};
+const { scale, rhythm } = typography;
+
+const BlogIndex = ({ route }: Props): React.Element<any> => (
+  <div>
+    <Helmet
+      title={config.blogTitle}
+      meta={[
+        { name: 'description', content: 'Sample blog' },
+        { name: 'keywords', content: 'blog, articles' },
+      ]}
+    />
+    <h1
+      style={{
+        ...scale(1.5),
+        marginBottom: rhythm(1.5),
+        marginTop: 0,
+      }}
+    >
+      <Link
+        style={{
+          boxShadow: 'none',
+          textDecoration: 'none',
+          color: 'inherit',
+        }}
+        to={prefixLink('/')}
+      >
+        {config.blogTitle}
+      </Link>
+    </h1>
+    <PostList posts={route.pages} />
+  </div>
+);
 
 export default BlogIndex;
