@@ -9,8 +9,8 @@ type Props = {
   posts: Page[],
 };
 
-const MainPage = ({ posts }: Props): React.Element<any> => (
-  <div>
+const HomePage = ({ posts }: Props): React.Element<any> => (
+  <main>
     <Helmet
       title={config.blogTitle}
       meta={[
@@ -20,7 +20,7 @@ const MainPage = ({ posts }: Props): React.Element<any> => (
     />
     <MainStage />
     <PostList posts={posts} />
-  </div>
+  </main>
 );
 
-export default MainPage;
+export default HomePage;

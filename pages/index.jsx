@@ -1,13 +1,13 @@
 /* @flow */
 import React from 'react';
-import MainPage from '../src/components/main/';
+import HomePage from '../src/components/home/';
 
 type Props = {
   route: Route,
 };
 
 const BlogIndex = ({ route }: Props): React.Element<any> => (
-  <MainPage posts={route.pages} />
+  <HomePage posts={route.pages} />
 );
 
 export default BlogIndex;
