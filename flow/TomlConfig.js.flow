@@ -3,5 +3,6 @@ declare module 'config' {
     blogTitle: string,
     authorName: string,
     linkPrefix: string,
+    blogImage: string,
   };
 }

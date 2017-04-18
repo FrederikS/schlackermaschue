@@ -19,6 +19,7 @@
     "recursive-readdir": "^2.1.0",
     "rimraf": "^2.6.1",
     "safe-access": "^0.1.0",
+    "styled-components": "^1.4.5",
     "sync-request": "^4.0.2",
     "typography": "^0.15.8",
     "typography-theme-stern-grove": "^0.15.0",
