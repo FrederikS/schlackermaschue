@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import Post from '../src/components/Post';
+import Post from '../src/components/post';
 
 import '../css/zenburn.css';
 

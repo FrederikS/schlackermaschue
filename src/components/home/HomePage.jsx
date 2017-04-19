@@ -1,6 +1,6 @@
 /* @flow */
 import React from 'react';
-import PostList from '../PostList';
+import PostList from '../post/list';
 import MainStage from './stage/';
 import ContentContainer from '../layout/content';
 

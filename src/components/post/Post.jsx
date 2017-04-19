@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 import moment from 'moment';
-import typography from '../utils/typography';
+import typography from '../../utils/typography';
 
 type Props = {
   post: Post,

@@ -3,8 +3,8 @@ import React from 'react';
 import sortBy from 'lodash/sortBy';
 import access from 'safe-access';
 import include from 'underscore.string/include';
-import typography from '../utils/typography';
-import PostTeaser from './PostTeaser';
+import typography from '../../../utils/typography';
+import PostTeaser from '../teaser';
 
 type Props = {
   posts: Page[],
