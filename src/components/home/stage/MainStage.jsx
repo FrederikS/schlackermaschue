@@ -10,7 +10,7 @@ const StageImageWrapper = styled.div`
     display: table;
     width: 100%;
     height: 60vh;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     text-align: center;
     // background: #222 no-repeat center center;
     background-size: cover;

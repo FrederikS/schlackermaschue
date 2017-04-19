@@ -1,5 +1,7 @@
 declare type Post = {
   title: string,
+  description: string,
+  keywords: string,
   date: string,
   body: string,
   readNext: string,

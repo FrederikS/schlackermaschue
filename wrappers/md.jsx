@@ -5,7 +5,7 @@ import Post from '../src/components/Post';
 import '../css/zenburn.css';
 
 type Props = {
-  route: Route,
+  route: RouteForWrapper,
 };
 
 const MarkdownWrapper = ({ route }: Props): React.Element<any> => (

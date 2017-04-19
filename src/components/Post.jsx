@@ -1,8 +1,6 @@
 /* @flow */
 import React from 'react';
 import moment from 'moment';
-import Helmet from 'react-helmet';
-import { config } from 'config';
 import typography from '../utils/typography';
 
 type Props = {
@@ -13,7 +11,6 @@ const { rhythm } = typography;
 
 const PostComponent = ({ post }: Props): React.Element<any> => (
   <div className="markdown">
-    <Helmet title={`${post.title} | ${config.blogTitle}`} />
     <h1 style={{ marginTop: 0 }}>{post.title}</h1>
     {/* eslint-disable react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: post.body }} />

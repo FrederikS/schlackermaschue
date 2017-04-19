@@ -3,7 +3,19 @@ type Page = {
   data: Post,
 };
 
-declare type Route = {
+type RouteLocation = {
+  action: string,
+  pathname: string,
+  hash: string,
+  query: any,
+  search: string,
+};
+
+declare type RouteForWrapper = {
   page: Page,
+  pages: Page[],
+}
+
+declare type Route = {
   pages: Page[],
 };

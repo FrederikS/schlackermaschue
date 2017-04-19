@@ -1,4 +1,5 @@
 blogTitle = "My Awesome Blog"
+blogDescription = "Sample Blog"
 authorName = "Kyle Mathews"
 linkPrefix = "/gatsby-starter-blog"
 blogImage = "/static/img/cover.jpg"
