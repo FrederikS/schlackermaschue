@@ -38,7 +38,7 @@ const App = ({ body }: Props): React.Element<any> => {
   }
 
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

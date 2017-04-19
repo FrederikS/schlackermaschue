@@ -26,7 +26,7 @@ const Layout = ({
       ]}
     />
     <Header />
-    <main>
+    <main role="main">
       {children}
     </main>
   </div>
