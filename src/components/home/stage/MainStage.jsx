@@ -5,7 +5,7 @@ import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import styled from 'styled-components';
 
 const StageImageWrapper = styled.div`
-    backgroundImage: url(${prefixLink(config.blogImage)});
+    background-image: url(${prefixLink(config.blogImage)});
     position: relative;
     display: table;
     width: 100%;

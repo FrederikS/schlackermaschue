@@ -2,7 +2,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
-import Header from '../Header';
+import Header from './header';
 
 type Props = {
   children: React.Element<any>,

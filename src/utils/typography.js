@@ -1,21 +1,34 @@
 /* @flow */
 import Typography from 'typography';
-import SternGrove from 'typography-theme-stern-grove';
 
-SternGrove.headerColor = 'hsla(0,0%,0%,0.65)';
-SternGrove.headerWeight = 700;
-SternGrove.bodyFontFamily = [
-  'Open Sans',
-  'MundoSans',
-  'Helvetica Neue',
-  'Arial',
-  'Helvetica',
-  'sans-serif',
-];
-SternGrove.baseFontSize = '20.00px';
-SternGrove.baseLineHeight = 1.30;
-SternGrove.bodyColor = 'hsla(0,0%,0%,0.55)';
-const typography = new Typography(SternGrove);
+const typography = new Typography({
+  baseFontSize: '20.00px',
+  baseLineHeight: 1.30,
+  bodyColor: 'hsla(0,0%,0%,0.55)',
+  bodyFontFamily: [
+    'Open Sans',
+    'MundoSans',
+    'Helvetica Neue',
+    'Arial',
+    'Helvetica',
+    'sans-serif',
+  ],
+  bodyWeight: 400,
+  boldWeight: 700,
+  googleFonts: [
+    {
+      name: 'Amatic SC',
+      styles: ['700'],
+    },
+    {
+      name: 'Open Sans',
+      styles: ['400'],
+    },
+  ],
+  headerColor: 'hsla(0,0%,0%,0.65)',
+  headerFontFamily: ['Amatic SC', 'handwriting'],
+  headerWeight: 700,
+});
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
