@@ -1,5 +1,7 @@
 blogTitle = "My Awesome Blog"
 blogDescription = "Sample Blog"
-authorName = "Kyle Mathews"
+authorName = "Frederik Steffen"
 linkPrefix = "/gatsby-starter-blog"
 blogImage = "/static/img/cover.jpg"
+twitter = "https://twitter.com/Frederiiiiik"
+email = "foo@bar.com"

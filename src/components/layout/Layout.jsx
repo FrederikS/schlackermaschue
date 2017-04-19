@@ -3,6 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 import Header from './header';
+import Footer from './footer';
 
 type Props = {
   children: React.Element<any>,
@@ -29,6 +30,7 @@ const Layout = ({
     <main role="main">
       {children}
     </main>
+    <Footer />
   </div>
 );
 
