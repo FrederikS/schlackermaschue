@@ -7,7 +7,6 @@ import styled from 'styled-components';
 const StageImageWrapper = styled.div`
     background-image: url(${prefixLink(config.blogImage)});
     position: relative;
-    display: table;
     width: 100%;
     height: 60vh;
     margin-bottom: 0.5rem;
@@ -17,17 +16,11 @@ const StageImageWrapper = styled.div`
     overflow: hidden;
 `;
 
-const Vertical = styled.div`
-    display: table-cell;
-    vertical-align: middle;
-`;
-
 const Inner = styled.div`
     width: 80%;
     position: relative;
-    width: 80%;
     max-width: 710px;
-    margin: 0 auto;
+    margin: 2em auto;
 `;
 
 const PageTitle = styled.h1`
@@ -47,14 +40,10 @@ const PageDescription = styled.h2`
 
 const MainStage = (): React.Element<any> => (
   <StageImageWrapper>
-    <Vertical>
-      <Inner>
-        <PageTitle>Finding The Way Home</PageTitle>
-        <PageDescription>
-          A beautiful narrative written with the worlds most elegant publishing platform. The story begins here.
-        </PageDescription>
-      </Inner>
-    </Vertical>
+    <Inner>
+      <PageTitle>{config.blogTitle}</PageTitle>
+      <PageDescription>{config.blogDescription}</PageDescription>
+    </Inner>
   </StageImageWrapper>
 );
 

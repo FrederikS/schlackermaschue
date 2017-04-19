@@ -7,37 +7,32 @@ import Footer from './footer';
 
 type Props = {
   children: React.Element<any>,
-  title?: string,
-  description?: string,
-  keywords?: string,
+  page: ?Page,
 };
 
-const Layout = ({
-  children,
-  title,
-  description,
-  keywords,
-}: Props): React.Element<any> => (
-  <div>
-    <Helmet
-      title={title}
-      meta={[
-        { name: 'description', content: description },
-        { name: 'keywords', content: keywords },
-      ]}
-    />
-    <Header />
-    <main role="main">
-      {children}
-    </main>
-    <Footer />
-  </div>
-);
-
-Layout.defaultProps = {
-  title: config.blogTitle,
-  description: config.blogDescription,
-  keywords: 'blog, articles',
+const Layout = ({ children, page }: Props): React.Element<any> => {
+  const defaultMetaData = {
+    title: config.blogTitle,
+    description: config.blogDescription,
+    keywords: 'blog',
+  };
+  const { title, description, keywords } = page ? page.data : defaultMetaData;
+  return (
+    <div>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: description },
+          { name: 'keywords', content: keywords },
+        ]}
+      />
+      <Header withHomeLink={page ? page.path !== '/' : true} />
+      <main role="main">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default Layout;

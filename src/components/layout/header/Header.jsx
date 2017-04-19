@@ -24,18 +24,28 @@ const Nav = styled.nav`
     left: 0;
     right: 0;
     z-index: 3;
+    margin-top: 1em;
 `;
 
-const Header = (): React.Element<any> => (
+type Props = {
+  withHomeLink?: boolean,
+};
+
+const Header = ({ withHomeLink }: Props): React.Element<any> => (
   <header>
     <Nav>
-      <BlogHeadline>
-        <HomeLink to={prefixLink('/')}>
-          {config.blogTitle}
-        </HomeLink>
-      </BlogHeadline>
+      {withHomeLink &&
+        <BlogHeadline>
+          <HomeLink to={prefixLink('/')}>
+            {config.blogTitle}
+          </HomeLink>
+        </BlogHeadline>}
     </Nav>
   </header>
 );
+
+Header.defaultProps = {
+  withHomeLink: true,
+};
 
 export default Header;
