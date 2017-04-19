@@ -6,7 +6,6 @@ import { config } from 'config';
 import styled from 'styled-components';
 
 const BlogHeadline = styled.h3`
-    font-family: Amatic SC, handwriting;
     margin-top: 0;
     font-size: 2rem;
     color: #a0a0a0;
