@@ -13,12 +13,13 @@ type Props = {
 
 const PostItemList = styled.ol`
     list-style-type: none;
-    margin-right: 1.3rem;    
+    margin-right: 1.3rem;
+    margin-bottom: 0;
 `;
 
 const PostItem = styled.li`
     margin-bottom: ${typography.rhythm(1 / 4)};
-    padding: 40px 0;
+    padding: 20px 0;
     border-bottom: ${props => (props.lastChild ? '0px' : '1px solid #f2f2f0')};
 `;
 

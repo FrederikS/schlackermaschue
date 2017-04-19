@@ -7,7 +7,7 @@ const FooterWrapper = styled.footer`
     text-align: center;
     font-size: 12px;
     color: #999;
-    padding: 24px 0;
+    padding: 15px 0;
 `;
 
 const LinkList = styled.ul`
