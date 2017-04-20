@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react';
-import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import styled from 'styled-components';
 
 const StageImageWrapper = styled.div`
@@ -10,7 +9,7 @@ const StageImageWrapper = styled.div`
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 0.2)
       ),
-      url(${props => prefixLink(props.image)});
+      url(${props => props.image});
     position: relative;
     width: 100%;
     height: 60vh;

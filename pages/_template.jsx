@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react';
-import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import Layout from '../src/components/layout/';
 
 type Props = {
@@ -10,9 +9,7 @@ type Props = {
 };
 
 const Template = ({ children, route, location }: Props): React.Element<any> => {
-  const currentPage = route.pages.find(
-    page => page.path === prefixLink(location.pathname)
-  );
+  const currentPage = route.pages.find(page => page.path === location.pathname);
   return (
     <Layout page={currentPage}>
       {children}

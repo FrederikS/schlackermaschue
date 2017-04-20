@@ -52,7 +52,7 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx . && ./node_modules/.bin/flow",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
-    "build": "yarn lint && gatsby build && node ampify.js",
+    "build": "yarn lint && gatsby build --prefix-links && node ampify.js",
     "deploy": "yarn build && gh-pages -d public"
   },
   "eslintConfig": {

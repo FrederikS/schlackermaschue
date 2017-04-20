@@ -1,7 +1,7 @@
 blogTitle = "My Awesome Blog"
 blogDescription = "A beautiful narrative written with the worlds most elegant publishing platform. The story begins here."
 authorName = "Frederik Steffen"
-linkPrefix = "/gatsby-starter-blog"
+linkPrefix = "/gatsby-amp-blog-starter"
 blogImage = "/static/img/cover.jpg"
 twitter = "https://twitter.com/Frederiiiiik"
 email = "foo@bar.com"
