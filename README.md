@@ -1,5 +1,7 @@
 # Fork of gatsby-amp-starter-blog
 
+[Demo](https://frederiks.github.io/gatsby-amp-blog-starter/)
+
 A gatsby starter for creating an AMP compliant blog.
 
 Not sure what Amp is? Learn about [Project AMP](https://www.ampproject.org).
