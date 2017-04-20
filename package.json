@@ -53,7 +53,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
     "build": "yarn lint && gatsby build && node ampify.js",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+    "deploy": "yarn build && gh-pages -d public"
   },
   "eslintConfig": {
     "env": {
