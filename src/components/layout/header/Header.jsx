@@ -1,20 +1,13 @@
 /* @flow */
 import React from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import { config } from 'config';
 import styled from 'styled-components';
+import { UndecoratedLink } from '../../link';
 
 const BlogHeadline = styled.h3`
     font-size: 1em;
     margin: 0.5em;
     color: #fff;
-`;
-
-const HomeLink = styled(Link)`
-    box-shadow: none;
-    text-decoration: none;
-    color: inherit;
 `;
 
 const Nav = styled.nav`    
@@ -34,9 +27,9 @@ const Header = ({ withHomeLink }: Props): React.Element<any> => (
     <Nav>
       {withHomeLink &&
         <BlogHeadline>
-          <HomeLink to={prefixLink('/')}>
+          <UndecoratedLink to="/">
             {config.blogTitle}
-          </HomeLink>
+          </UndecoratedLink>
         </BlogHeadline>}
     </Nav>
   </header>

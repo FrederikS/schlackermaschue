@@ -10,6 +10,9 @@ type Props = {
 
 const ContentWrapper = styled.div`
     margin: 0.7em 1.3em;
+    & a {
+        color: inherit;
+    }
 `;
 
 const PostDate = styled.span`

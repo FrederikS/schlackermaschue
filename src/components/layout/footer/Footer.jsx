@@ -25,6 +25,11 @@ const MetaSection = styled.section`
     margin-bottom: 0.5em;
 `;
 
+const PoweredByLink = styled.a`
+    color: inherit;
+    color: #666;
+`;
+
 const Footer = (): React.Element<any> => (
   <FooterWrapper>
     <LinkList>
@@ -42,7 +47,11 @@ const Footer = (): React.Element<any> => (
       © 2017 • All rights reserved.
     </MetaSection>
     <MetaSection>
-      Made with <a href="https://github.com/gatsbyjs/gatsby"> Gatsby</a>
+      Made with
+      {' '}
+      <PoweredByLink href="https://github.com/gatsbyjs/gatsby">
+        Gatsby
+      </PoweredByLink>
     </MetaSection>
   </FooterWrapper>
 );
