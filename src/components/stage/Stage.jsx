@@ -1,17 +1,21 @@
 /* @flow */
 import React from 'react';
-import { config } from 'config';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import styled from 'styled-components';
 
 const StageImageWrapper = styled.div`
-    background-image: url(${prefixLink(config.blogImage)});
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url(${props => prefixLink(props.image)});
     position: relative;
     width: 100%;
     height: 60vh;
     margin-bottom: 0.5rem;
     text-align: center;
-    // background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
 `;
@@ -20,7 +24,7 @@ const Inner = styled.div`
     width: 80%;
     position: relative;
     max-width: 710px;
-    margin: 2em auto;
+    margin: 3em auto;
 `;
 
 const PageTitle = styled.h1`
@@ -35,16 +39,24 @@ const PageDescription = styled.h2`
     line-height: 1.5em;
     font-weight: 400;
     letter-spacing: 0.01rem;
+    font-size: 1.2em;
     color: rgba(255,255,255,0.8);
 `;
 
-const MainStage = (): React.Element<any> => (
-  <StageImageWrapper>
+type Props = {
+  image: string,
+  title: string,
+  description?: string,
+};
+
+const Stage = (props: Props): React.Element<any> => (
+  <StageImageWrapper image={props.image}>
     <Inner>
-      <PageTitle>{config.blogTitle}</PageTitle>
-      <PageDescription>{config.blogDescription}</PageDescription>
+      <PageTitle>{props.title}</PageTitle>
+      {props.description &&
+        <PageDescription>{props.description}</PageDescription>}
     </Inner>
   </StageImageWrapper>
 );
 
-export default MainStage;
+export default Stage;

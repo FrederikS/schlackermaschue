@@ -1,9 +1,9 @@
 ---
 title: My Second Post!
 description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, conset
+image: ./avocado-829092_1280.jpg
 date: "2015-05-06T23:46:37.121Z"
 layout: post
-readNext: "/hi-folks/"
 path: "/my-second-post/"
 ---
 

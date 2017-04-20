@@ -6,9 +6,9 @@ import { config } from 'config';
 import styled from 'styled-components';
 
 const BlogHeadline = styled.h3`
-    margin-top: 0;
-    font-size: 2rem;
-    color: #a0a0a0;
+    font-size: 1em;
+    margin: 0.5em;
+    color: #fff;
 `;
 
 const HomeLink = styled(Link)`
@@ -17,14 +17,12 @@ const HomeLink = styled(Link)`
     color: inherit;
 `;
 
-const Nav = styled.nav`
-    text-align: center;
+const Nav = styled.nav`    
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 3;
-    margin-top: 1em;
 `;
 
 type Props = {

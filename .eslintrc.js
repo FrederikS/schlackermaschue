@@ -16,6 +16,7 @@ module.exports = {
     ],
     "rules": {
         "prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true}],
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/core-modules": [ "config" ]

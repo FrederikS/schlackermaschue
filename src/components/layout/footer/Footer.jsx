@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
 
 const LinkList = styled.ul`
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 -0.5em 0;
 `;
 
 const ContactLink = styled.a`
@@ -21,7 +21,8 @@ const ContactLink = styled.a`
 `;
 
 const MetaSection = styled.section`
-    margin: -0.7em 0;
+    line-height: 1em;
+    margin-bottom: 0.5em;
 `;
 
 const Footer = (): React.Element<any> => (
