@@ -11,6 +11,7 @@ type Props = {
 
 const PostFooter = styled.footer`
     color: #b3b3b1;
+    font-size: 0.8em;
 `;
 
 const Section = styled.section`
