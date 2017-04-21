@@ -1,0 +1,17 @@
+.move-enter {
+  transform: translateY(100vh);
+}
+
+.move-enter.move-enter-active {
+  transform: translateY(0%);
+  transition: transform .1s ease-in;
+}
+
+.move-leave {
+  transform: translateY(0%);
+}
+
+.move-leave.move-leave-active {
+  transform: translateY(-100vh);
+  transition: transform .2s ease-in;
+}
