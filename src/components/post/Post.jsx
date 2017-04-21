@@ -2,6 +2,7 @@
 import React from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
+import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import PageLayout from '../layout/page';
 
 type Props = {
@@ -22,7 +23,10 @@ const PostDate = styled.span`
 `;
 
 const PostComponent = ({ post }: Props): React.Element<any> => (
-  <PageLayout image={post.image} title={post.title}>
+  <PageLayout
+    image={post.image ? prefixLink(post.image) : undefined}
+    title={post.title}
+  >
     <PostDate>{moment(post.date).format('LL')}</PostDate>
     <ContentWrapper className="markdown">
       <h1>{post.title}</h1>
