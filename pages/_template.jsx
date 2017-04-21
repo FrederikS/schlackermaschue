@@ -11,7 +11,7 @@ type Props = {
 const Template = ({ children, route, location }: Props): React.Element<any> => {
   const currentPage = route.pages.find(page => page.path === location.pathname);
   return (
-    <Layout page={currentPage} location={location}>
+    <Layout page={currentPage}>
       {children}
     </Layout>
   );
