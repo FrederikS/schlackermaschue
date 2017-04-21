@@ -4,13 +4,15 @@ import Helmet from 'react-helmet';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
 import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
+import { config } from 'config';
 import Header from './header';
 import Footer from './footer';
 import '../../../css/transitions.css';
 
 type Props = {
   children: React.Element<any>,
-  page: Page,
+  page: ?Page,
+  location: RouteLocation,
 };
 
 const ContentWrapper = styled.div`
@@ -18,8 +20,13 @@ const ContentWrapper = styled.div`
   width: 100%;
 `;
 
-const Layout = ({ children, page }: Props): React.Element<any> => {
-  const { title, description, keywords } = page.data;
+const Layout = ({ children, page, location }: Props): React.Element<any> => {
+  const defaultMetaData = {
+    title: config.blogTitle,
+    description: config.blogDescription,
+    keywords: 'blog',
+  };
+  const { title, description, keywords } = page ? page.data : defaultMetaData;
   return (
     <div>
       <Helmet
@@ -34,7 +41,7 @@ const Layout = ({ children, page }: Props): React.Element<any> => {
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
       >
-        <ContentWrapper key={page.path}>
+        <ContentWrapper key={location.pathname}>
           <Header withHomeLink={page ? page.path !== prefixLink('/') : true} />
           <main role="main">
             {children}
