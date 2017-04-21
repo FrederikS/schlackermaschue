@@ -3,6 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
+import { prefixLink } from 'gatsby/dist/isomorphic/gatsby-helpers';
 import Header from './header';
 import Footer from './footer';
 import '../../../css/transitions.css';
@@ -15,9 +16,6 @@ type Props = {
 const ContentWrapper = styled.div`
   position: absolute;
   width: 100%;
-`;
-const Container = styled.div`
-  position: relative;
 `;
 
 const Layout = ({ children, page }: Props): React.Element<any> => {
@@ -37,7 +35,7 @@ const Layout = ({ children, page }: Props): React.Element<any> => {
         transitionLeaveTimeout={500}
       >
         <ContentWrapper key={page.path}>
-          <Header withHomeLink={page ? page.path !== '/' : true} />
+          <Header withHomeLink={page ? page.path !== prefixLink('/') : true} />
           <main role="main">
             {children}
           </main>
