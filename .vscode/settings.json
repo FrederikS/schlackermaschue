@@ -9,5 +9,6 @@
     "prettier.trailingComma": "es5",
     "prettier.printWidth": 100,
     "flow.useNPMPackagedFlow": true,
-    "javascript.validate.enable": false
+    "javascript.validate.enable": false,
+    "editor.tabSize": 2
 }

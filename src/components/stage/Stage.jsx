@@ -1,23 +1,7 @@
 /* @flow */
 import React from 'react';
 import styled from 'styled-components';
-
-const StageImageWrapper = styled.div`
-    background:
-      linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.2)
-      ),
-      url(${props => props.image});
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    background-size: cover;
-    overflow: hidden;
-`;
+import StageBrackgroundImage from './image';
 
 const Inner = styled.div`
     width: 80%;
@@ -49,13 +33,13 @@ type Props = {
 };
 
 const Stage = (props: Props): React.Element<any> => (
-  <StageImageWrapper image={props.image}>
+  <StageBrackgroundImage image={props.image}>
     <Inner>
       <PageTitle>{props.title}</PageTitle>
       {props.description &&
         <PageDescription>{props.description}</PageDescription>}
     </Inner>
-  </StageImageWrapper>
+  </StageBrackgroundImage>
 );
 
 export default Stage;
