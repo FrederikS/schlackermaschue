@@ -1,6 +1,10 @@
 /* @flow */
 import React from 'react';
 import styled from 'styled-components';
+import { Track, TrackDocument } from 'react-track';
+import { tween } from 'react-imation';
+import { bottomTop, calculateScrollY } from 'react-track/tracking-formulas';
+import { translate3d } from 'react-imation/tween-value-factories';
 
 const BackgroundImageWrapper = styled.div`
   position: relative;
@@ -19,11 +23,10 @@ const BackgroundImage = styled.div`
       rgba(0, 0, 0, 0.2)
     ),
     url(${props => props.image});
-  transform: ${props => `translate3d(0px, ${props.scrollY / 3}px, 0px)`};
-  opacity: ${props => 1 - props.scrollY / 700};
   position: absolute;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   top: 0;
   left: 0;
   right: 0;
@@ -36,44 +39,26 @@ type Props = {
   children: React.Element<any>,
 };
 
-type State = {
-  scrollY: number,
-};
-
-class StageBackgroundImage extends React.Component {
-  props: Props;
-  state: State;
-
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      scrollY: 0,
-    };
-  }
-
-  componentDidMount() {
-    document.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = (): void => {
-    this.setState({
-      scrollY: window.scrollY,
-    });
-  };
-
-  render() {
-    return (
-      <BackgroundImageWrapper>
-        <BackgroundImage image={this.props.image} scrollY={this.state.scrollY}>
-          {this.props.children}
-        </BackgroundImage>
-      </BackgroundImageWrapper>
-    );
-  }
-}
+const StageBackgroundImage = ({ image, children }: Props) => (
+  <BackgroundImageWrapper>
+    <TrackDocument formulas={[calculateScrollY, bottomTop]}>
+      {(scrollY, bottomTopOuter) => (
+        <Track component={BackgroundImage} formulas={[bottomTopOuter]}>
+          {(BackgroundImageTracked, posBottomTop) => (
+            <BackgroundImageTracked
+              image={image}
+              style={tween(scrollY, [
+                [0, { transform: translate3d(0, 0, 0) }],
+                [posBottomTop, { transform: translate3d(0, 100, 0) }],
+              ])}
+            >
+              {children}
+            </BackgroundImageTracked>
+          )}
+        </Track>
+      )}
+    </TrackDocument>
+  </BackgroundImageWrapper>
+);
 
 export default StageBackgroundImage;

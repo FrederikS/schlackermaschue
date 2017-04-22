@@ -5283,7 +5283,7 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
 
-performance-now@^0.2.0:
+performance-now@^0.2.0, performance-now@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
@@ -6006,6 +6006,12 @@ raf@^2.0.4:
   dependencies:
     performance-now "~0.1.3"
 
+raf@^3.1.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.3.0.tgz#93845eeffc773f8129039f677f80a36044eee2c3"
+  dependencies:
+    performance-now "~0.2.0"
+
 railroad-diagrams@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
@@ -6100,6 +6106,12 @@ react-icons@^2.2.3:
   dependencies:
     react-icon-base "2.0.4"
 
+react-imation@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/react-imation/-/react-imation-0.5.3.tgz#61478ae167812849ae3bf91ed72e24d4970e0c15"
+  dependencies:
+    raf "^3.1.0"
+
 react-page-width@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-page-width/-/react-page-width-1.0.1.tgz#264e5bffe3cd2a7d7a9ee9bb800df6333aaac990"
@@ -6145,6 +6157,12 @@ react-side-effect@^1.0.2, react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^0.2.2"
+
+react-track@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/react-track/-/react-track-0.4.4.tgz#84e59ed27643b7e61f5d36894e8e2263fa74fb50"
+  dependencies:
+    raf "^3.1.0"
 
 react-transform-catch-errors@^1.0.2:
   version "1.0.2"

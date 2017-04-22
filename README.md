@@ -18,6 +18,7 @@ The build will output to the `public` directory and that directory will contain 
 You can then spin up a web server using MAMP or your tool of choice locally that points to your public directory. And test that your site is AMP compliant using this [Chrome Extension](https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc?hl=en)
 
 ## TODO
+* extract page-transition-component
 * parallax smooth
 * CTA read article
 * analytics
