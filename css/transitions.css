@@ -1,6 +1,6 @@
 .move-enter {
   z-index: 10;
-  transform: translateY(100vh);
+  transform: translateY(100%);
 }
 
 .move-enter.move-enter-active {
@@ -13,6 +13,6 @@
 }
 
 .move-leave.move-leave-active {
-  transform: translateY(-100vh);
+  transform: translateY(-100%);
   transition: transform .5s ease-in;
 }

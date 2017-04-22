@@ -15,8 +15,8 @@ module.exports = {
       'error',
       {
         order: [
-          'type-annotations',
           'static-methods',
+          'type-annotations',
           'lifecycle',
           'everything-else',
           'render',
