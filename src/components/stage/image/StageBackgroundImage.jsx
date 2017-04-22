@@ -8,6 +8,7 @@ const BackgroundImageWrapper = styled.div`
   overflow: hidden;
   margin-bottom: 0.5rem;
   text-align: center;
+  background-color: #000;
 `;
 
 const BackgroundImage = styled.div`
@@ -18,12 +19,16 @@ const BackgroundImage = styled.div`
       rgba(0, 0, 0, 0.2)
     ),
     url(${props => props.image});
-  transform: ${props => `translate3d(0px, ${props.scrollY / 5}px, 0px)`};
+  transform: ${props => `translate3d(0px, ${props.scrollY / 3}px, 0px)`};
+  opacity: ${props => 1 - props.scrollY / 700};
   position: absolute;
-  width: 100%;
-  height: 100%;
   background-size: cover;
   background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 `;
 
 type Props = {
