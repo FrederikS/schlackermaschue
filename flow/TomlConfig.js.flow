@@ -7,5 +7,6 @@ declare module 'config' {
     blogImage: string,
     twitter: string,
     email: string,
+    gaTrackingCode: string,
   };
 }
