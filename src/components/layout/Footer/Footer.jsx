@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
 
 const LinkList = styled.ul`
   list-style-type: none;
-  margin: 0 0 -0.5em 0;
+  padding: 0;
 `;
 
 const ContactLink = styled.a`
