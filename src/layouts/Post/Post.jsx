@@ -17,14 +17,17 @@ const PostDate = styled.span`
   font-size: 0.8em;
 `;
 
-const PostComponent = ({ head: post, body }: PageProps): React.Element<any> => (
-  <PageLayout image={post.image ? post.image : undefined} title={post.title}>
-    <PostDate>{new Date(post.date).toDateString()}</PostDate>
-    <ContentWrapper className="markdown">
-      <h1>{post.title}</h1>
-      <BodyContainer>{body}</BodyContainer>
-    </ContentWrapper>
-  </PageLayout>
-);
+const PostComponent = (props: PageProps): React.Element<any> => {
+  const { head: post, body } = props;
+  return (
+    <PageLayout {...props}>
+      <PostDate>{new Date(post.date).toDateString()}</PostDate>
+      <ContentWrapper className="markdown">
+        <h1>{post.title}</h1>
+        {!props.isLoading && <BodyContainer>{body}</BodyContainer>}
+      </ContentWrapper>
+    </PageLayout>
+  );
+};
 
 export default PostComponent;
