@@ -1,0 +1,10 @@
+type Config = {
+  name: string,
+  twitter: string,
+  author: string,
+  email: string,
+};
+
+declare type Metadata = {
+  pkg: Config,
+};

@@ -1,0 +1,15 @@
+type Head = {
+  hero: string,
+  title: string,
+  description?: string,
+  date?: string,
+  route?: string,
+};
+
+declare type PageProps = {
+  isLoading: boolean,
+  head: Head,
+  body: string,
+  __filename: string,
+  __url: string,
+};

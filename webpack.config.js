@@ -46,7 +46,7 @@ export default (config = {}) => {
 
         // *.js => babel + eslint
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           include: [
             path.resolve(__dirname, "scripts"),
             path.resolve(__dirname, "src"),
@@ -221,6 +221,6 @@ export default (config = {}) => {
       filename: "[name].[hash].js",
     },
 
-    resolve: { extensions: [ ".js", ".json" ] },
+    resolve: { extensions: [ ".js", ".json", ".jsx" ] },
   }
 }

@@ -1,0 +1,3 @@
+declare type Post = Head & {
+  __url: string,
+};

@@ -1,0 +1,7 @@
+declare type RouteLocation = {
+  action: string,
+  pathname: string,
+  hash: string,
+  query: any,
+  search: string,
+};

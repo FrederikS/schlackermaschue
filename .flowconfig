@@ -1,0 +1,12 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/phenomic/.*
+<PROJECT_ROOT>/node_modules/stylelint/.*
+<PROJECT_ROOT>/node_modules/react-topbar-progress-indicator/.*
+<PROJECT_ROOT>/node_modules/styled-components/.*
+
+[include]
+
+[libs]
+./flow
+
+[options]
