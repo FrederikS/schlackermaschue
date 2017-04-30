@@ -6,7 +6,7 @@ type Props = {
   children: React.Element<any>,
 };
 
-const Container = styled.div`
+const Container = styled.main`
   flex: 1 1 auto;
   display: flex;
   align-items: stretch;

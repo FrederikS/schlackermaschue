@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+/* @flow */
+import React from 'react';
 import styled from 'styled-components';
-import Page from '../Page';
+import PageLayout from '../Page';
 
 const Container = styled.div`
   display: flex;
@@ -11,12 +12,6 @@ const Container = styled.div`
   padding: 1rem 0;
 `;
 
-const Oops = styled.div`
-  font-size: 4rem;
-  line-height: 4rem;
-  color: #ddd;
-`;
-
 const Title = styled.p`
   margin: 4rem 0;
   font-size: 2rem;
@@ -24,15 +19,19 @@ const Title = styled.p`
   text-align: center;
 `;
 
-const PageError = ({ error, errorText }) => (
-  <Page
+type Props = {
+  error: number,
+  errorText: string,
+};
+
+const PageError = ({ error, errorText }: Props): React.Element<any> => (
+  <PageLayout
     head={{
-      // hero credit: https://www.flickr.com/photos/mypubliclands/16101654539/
+      title: '😱 Oooops!',
       hero: 'https://farm8.staticflickr.com/7559/16101654539_bee5151340_k.jpg',
     }}
   >
     <Container>
-      <Oops>{'😱 Oooops!'}</Oops>
       <Title>
         <strong>{error}</strong>
         {' '}
@@ -46,13 +45,8 @@ const PageError = ({ error, errorText }) => (
           {'Do not hesitate to report this page 😁.'}
         </div>}
     </Container>
-  </Page>
+  </PageLayout>
 );
-
-PageError.propTypes = {
-  error: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  errorText: PropTypes.string,
-};
 
 PageError.defaultProps = {
   error: 404,
