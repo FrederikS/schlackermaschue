@@ -4,9 +4,11 @@ import 'react-hot-loader/patch';
 import 'whatwg-fetch';
 import phenomicClient from 'phenomic/lib/client';
 
-import metadata from '../src/metadata';
-import routes from '../src/routes';
-import store from '../src/store';
+/* eslint-disable import/extensions */
+import metadata from '../src/metadata.js';
+import routes from '../src/routes.jsx';
+import store from '../src/store.js';
+/* eslint-enable import/extensions */
 
 phenomicClient({ metadata, routes, store });
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
-import './transition.css';
+import './transition.global.css';
 
 type Props = {
   children: React.Element<any>,
