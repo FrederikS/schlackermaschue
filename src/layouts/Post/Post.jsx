@@ -23,7 +23,6 @@ const PostComponent = (props: PageProps): React.Element<any> => {
     <PageLayout {...props}>
       <PostDate>{new Date(post.date).toDateString()}</PostDate>
       <ContentWrapper>
-        <h1>{post.title}</h1>
         {!props.isLoading && <BodyContainer>{body}</BodyContainer>}
       </ContentWrapper>
     </PageLayout>
