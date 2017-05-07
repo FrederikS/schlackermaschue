@@ -1,7 +1,7 @@
 /* @flow */
 import React, { PropTypes } from 'react';
+import styled from 'styled-components';
 import Stage from '../../components/Stage';
-import ContentContainer from '../../components/layout/Content';
 import LoadingIndicator from '../../components/Loading';
 import PageMeta from '../../components/layout/page/Meta';
 import PageTransition from '../../components/layout/page/Transition';
@@ -13,6 +13,12 @@ type Props = PageProps & {
 type Context = {
   metadata: Metadata,
 };
+
+const ContentContainer = styled.div`
+  padding: 1em 1em;
+  max-width: 35em;
+  margin: auto;
+`;
 
 const PageLayout = (
   props: Props,
