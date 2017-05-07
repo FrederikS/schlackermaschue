@@ -5,7 +5,6 @@ import DefaultHeadMeta from './Meta';
 import Header from '../Header';
 import Content from '../Content';
 import Footer from '../Footer';
-// import PageTransition from '../page/Transition';
 
 import './index.global.css';
 
@@ -30,13 +29,11 @@ const Layout = (
 ) => (
   <Container>
     <DefaultHeadMeta />
-    {/* <PageTransition location={location}> */}
     <Header title={pkg.name} />
     <Content>
       {children}
     </Content>
     <Footer {...pkg} />
-    {/* </PageTransition> */}
   </Container>
 );
 
