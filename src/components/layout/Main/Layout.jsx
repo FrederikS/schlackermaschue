@@ -19,10 +19,6 @@ type Props = {
   children: React.Element<any>,
 };
 
-type Context = {
-  metadata: Metadata,
-};
-
 const Layout = (
   { location, children }: Props,
   { metadata: { pkg } }: Context

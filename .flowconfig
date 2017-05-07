@@ -3,6 +3,7 @@
 <PROJECT_ROOT>/node_modules/stylelint/.*
 <PROJECT_ROOT>/node_modules/react-topbar-progress-indicator/.*
 <PROJECT_ROOT>/node_modules/styled-components/.*
+<PROJECT_ROOT>/node_modules/typography/.*
 
 [include]
 

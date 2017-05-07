@@ -1,24 +1,21 @@
+/* @flow */
 import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
+import { GoogleFont, TypographyStyle } from 'react-typography';
+import typography from '../../../../utils/typography';
 
-const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
+const DefaultHeadMeta = (props: any, { metadata: { pkg } }: Context) => (
   <div hidden>
     <Helmet
       meta={[
-        {
-          name: 'generator',
-          content: `${process.env.PHENOMIC_NAME} ${process.env.PHENOMIC_VERSION}`,
-        },
         { property: 'og:site_name', content: pkg.name },
         { name: 'twitter:site', content: `@${pkg.twitter}` },
-        ...(props.meta ? props.meta : []),
       ]}
       script={[
         {
           src: 'https://cdn.polyfill.io/v2/polyfill.min.js' +
             '?features=es6&flags=gated',
         },
-        ...(props.scripts ? props.scripts : []),
       ]}
     />
 
@@ -32,6 +29,8 @@ const DefaultHeadMeta = (props, { metadata: { pkg } }) => (
       ]}
     />
     <style>{'@-ms-viewport { width: device-width; }'}</style>
+    <TypographyStyle typography={typography} />
+    <GoogleFont typography={typography} />
   </div>
 );
 
