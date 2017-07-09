@@ -15,14 +15,10 @@ const Container = styled.div`
 `;
 
 type Props = {
-  location: RouteLocation,
   children: React.Element<any>,
 };
 
-const Layout = (
-  { location, children }: Props,
-  { metadata: { pkg } }: Context
-) => (
+const Layout = ({ children }: Props, { metadata: { pkg } }: Context) =>
   <Container>
     <DefaultHeadMeta />
     <Header title={pkg.name} />
@@ -30,8 +26,7 @@ const Layout = (
       {children}
     </Content>
     <Footer {...pkg} />
-  </Container>
-);
+  </Container>;
 
 Layout.contextTypes = {
   metadata: PropTypes.object.isRequired,

@@ -9,7 +9,7 @@ import PageError from './layouts/PageError';
 import Home from './layouts/Home';
 import Post from './layouts/Post';
 
-const PageContainer = props => (
+const PageContainer = props =>
   <PhenomicPageContainer
     {...props}
     layouts={{
@@ -18,8 +18,7 @@ const PageContainer = props => (
       Home,
       Post,
     }}
-  />
-);
+  />;
 
 export default (
   <Route component={MainLayout}>

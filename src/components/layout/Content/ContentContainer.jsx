@@ -13,10 +13,9 @@ const Container = styled.main`
   flex-direction: column;
 `;
 
-const ContentContainer = ({ children }: Props): React.Element<any> => (
+const ContentContainer = ({ children }: Props): React.Element<any> =>
   <Container>
     {children}
-  </Container>
-);
+  </Container>;
 
 export default ContentContainer;

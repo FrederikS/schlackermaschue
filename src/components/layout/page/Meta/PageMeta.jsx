@@ -10,9 +10,10 @@ type Props = PageProps & {
 const PageMeta = ({ head, config, __url }: Props): React.Element<any> => {
   const metaTitle = head.metaTitle ? head.metaTitle : head.title;
 
-  const socialImage = head.hero && head.hero.match('://')
-    ? head.hero
-    : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
+  const socialImage =
+    head.hero && head.hero.match('://')
+      ? head.hero
+      : joinUri(process.env.PHENOMIC_USER_URL, head.hero);
 
   const meta = [
     { property: 'og:type', content: 'article' },

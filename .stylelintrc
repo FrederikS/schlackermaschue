@@ -3,6 +3,9 @@
   "extends": "stylelint-config-standard",
   "syntax": "scss",
   "rules": {
-    "rule-empty-line-before": null
+    "rule-empty-line-before": null,
+    "block-opening-brace-space-after": null,
+    "block-closing-brace-space-before": null,
+    "declaration-colon-newline-after": null
   }
 }

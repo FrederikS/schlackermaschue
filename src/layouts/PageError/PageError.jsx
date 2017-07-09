@@ -24,7 +24,7 @@ type Props = {
   errorText: string,
 };
 
-const PageError = ({ error, errorText }: Props): React.Element<any> => (
+const PageError = ({ error, errorText }: Props): React.Element<any> =>
   <PageLayout
     head={{
       title: '😱 Oooops!',
@@ -33,9 +33,7 @@ const PageError = ({ error, errorText }: Props): React.Element<any> => (
   >
     <Container>
       <Title>
-        <strong>{error}</strong>
-        {' '}
-        {errorText}
+        <strong>{error}</strong> {errorText}
       </Title>
       {error === 404 &&
         <div>
@@ -45,8 +43,7 @@ const PageError = ({ error, errorText }: Props): React.Element<any> => (
           {'Do not hesitate to report this page 😁.'}
         </div>}
     </Container>
-  </PageLayout>
-);
+  </PageLayout>;
 
 PageError.defaultProps = {
   error: 404,

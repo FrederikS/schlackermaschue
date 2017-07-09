@@ -36,30 +36,24 @@ type Props = {
   twitter: string,
 };
 
-const Footer = (props: Props): React.Element<any> => (
+const Footer = (props: Props): React.Element<any> =>
   <FooterWrapper>
     <LinkList>
       <li>
-        <a href={props.twitter}><TwitterIcon size={40} color="black" /></a>
+        <a href={props.twitter}>
+          <TwitterIcon size={40} color="black" />
+        </a>
       </li>
     </LinkList>
     <MetaSection>
-      All content copyright
-      {' '}
-      <ContactLink href={`mailto:${props.email}`}>
+      All content copyright <ContactLink href={`mailto:${props.email}`}>
         {props.author}
-      </ContactLink>
-      {' '}
+      </ContactLink>{' '}
       © 2017 • All rights reserved.
     </MetaSection>
     <MetaSection>
-      Made with
-      {' '}
-      <PoweredByLink href={process.env.PHENOMIC_HOMEPAGE}>
-        Phenomic
-      </PoweredByLink>
+      Made with <PoweredByLink href={process.env.PHENOMIC_HOMEPAGE}>Phenomic</PoweredByLink>
     </MetaSection>
-  </FooterWrapper>
-);
+  </FooterWrapper>;
 
 export default Footer;

@@ -24,10 +24,7 @@ const PostItem = styled.li`
   border-bottom: ${props => (props.lastChild ? '0px' : '1px solid #f2f2f0')};
 `;
 
-const PostList = (
-  { numberOfPosts = 5 }: Props,
-  { collection }: Context
-): React.Element<any> => {
+const PostList = ({ numberOfPosts = 5 }: Props, { collection }: Context): React.Element<any> => {
   const latestPosts: Post[] = enhanceCollection(collection, {
     filter: { layout: 'Post' },
     sort: 'date',
@@ -37,11 +34,11 @@ const PostList = (
   return (
     <PostItemList>
       {/* eslint-disable no-underscore-dangle */}
-      {latestPosts.map((post, index) => (
+      {latestPosts.map((post, index) =>
         <PostItem key={post.__url} lastChild={index === latestPosts.length - 1}>
           <PostTeaser post={post} />
         </PostItem>
-      ))}
+      )}
       {/* eslint-enable no-underscore-dangle */}
     </PostItemList>
   );

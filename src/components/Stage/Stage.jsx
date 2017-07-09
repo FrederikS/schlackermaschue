@@ -22,12 +22,13 @@ type Props = {
   title: string,
 };
 
-const Stage = (props: Props): React.Element<any> => (
+const Stage = (props: Props): React.Element<any> =>
   <Hero image={props.hero}>
     <Inner>
-      <PageTitle>{props.title}</PageTitle>
+      <PageTitle>
+        {props.title}
+      </PageTitle>
     </Inner>
-  </Hero>
-);
+  </Hero>;
 
 export default Stage;

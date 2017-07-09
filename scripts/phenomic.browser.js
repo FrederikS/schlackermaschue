@@ -31,8 +31,7 @@ if (module.hot) {
   /* eslint-enable no-underscore-dangle, global-require */
 
   // hot load app
-  module.hot.accept(
-    ['../src/metadata.js', '../src/routes.jsx', '../src/store.js'],
-    () => phenomicClient({ metadata, routes, store })
+  module.hot.accept(['../src/metadata.js', '../src/routes.jsx', '../src/store.js'], () =>
+    phenomicClient({ metadata, routes, store })
   );
 }

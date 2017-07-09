@@ -3,10 +3,9 @@ import React from 'react';
 import PostList from '../../components/post/List';
 import PageLayout from '../Page';
 
-const HomePage = (props: PageProps): React.Element<any> => (
+const HomePage = (props: PageProps): React.Element<any> =>
   <PageLayout {...props}>
     <PostList />
-  </PageLayout>
-);
+  </PageLayout>;
 
 export default HomePage;

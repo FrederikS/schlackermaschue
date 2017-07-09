@@ -22,7 +22,7 @@ type Props = {
   title: string,
 };
 
-const Header = ({ withHomeLink, title }: Props): React.Element<any> => (
+const Header = ({ withHomeLink, title }: Props): React.Element<any> =>
   <header>
     <Nav>
       {withHomeLink &&
@@ -32,8 +32,7 @@ const Header = ({ withHomeLink, title }: Props): React.Element<any> => (
           </UndecoratedLink>
         </BlogHeadline>}
     </Nav>
-  </header>
-);
+  </header>;
 
 Header.defaultProps = {
   withHomeLink: true,

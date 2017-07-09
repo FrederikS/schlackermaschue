@@ -3,16 +3,9 @@ import Typography from 'typography';
 
 const typography = new Typography({
   baseFontSize: '20.00px',
-  baseLineHeight: 1.30,
+  baseLineHeight: 1.3,
   bodyColor: 'hsla(0,0%,0%,0.55)',
-  bodyFontFamily: [
-    'Open Sans',
-    'MundoSans',
-    'Helvetica Neue',
-    'Arial',
-    'Helvetica',
-    'sans-serif',
-  ],
+  bodyFontFamily: ['Open Sans', 'MundoSans', 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif'],
   bodyWeight: 400,
   boldWeight: 700,
   googleFonts: [

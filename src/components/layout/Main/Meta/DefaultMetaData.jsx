@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { GoogleFont, TypographyStyle } from 'react-typography';
 import typography from '../../../../utils/typography';
 
-const DefaultHeadMeta = (props: any, { metadata: { pkg } }: Context) => (
+const DefaultHeadMeta = (props: any, { metadata: { pkg } }: Context) =>
   <div hidden>
     <Helmet
       meta={[
@@ -13,8 +13,7 @@ const DefaultHeadMeta = (props: any, { metadata: { pkg } }: Context) => (
       ]}
       script={[
         {
-          src: 'https://cdn.polyfill.io/v2/polyfill.min.js' +
-            '?features=es6&flags=gated',
+          src: 'https://cdn.polyfill.io/v2/polyfill.min.js?features=es6&flags=gated',
         },
       ]}
     />
@@ -28,11 +27,12 @@ const DefaultHeadMeta = (props: any, { metadata: { pkg } }: Context) => (
         },
       ]}
     />
-    <style>{'@-ms-viewport { width: device-width; }'}</style>
+    <style>
+      {'@-ms-viewport { width: device-width; }'}
+    </style>
     <TypographyStyle typography={typography} />
     <GoogleFont typography={typography} />
-  </div>
-);
+  </div>;
 
 DefaultHeadMeta.propTypes = {
   meta: React.PropTypes.arrayOf(React.PropTypes.object),

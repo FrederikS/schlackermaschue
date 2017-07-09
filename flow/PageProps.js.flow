@@ -2,7 +2,7 @@ type Head = {
   hero: string,
   title: string,
   description?: string,
-  date?: string,
+  date: string,
   route?: string,
 };
 

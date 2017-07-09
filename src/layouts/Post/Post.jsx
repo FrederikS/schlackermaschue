@@ -21,9 +21,14 @@ const PostComponent = (props: PageProps): React.Element<any> => {
   const { head: post, body } = props;
   return (
     <PageLayout {...props}>
-      <PostDate>{new Date(post.date).toDateString()}</PostDate>
+      <PostDate>
+        {new Date(post.date).toDateString()}
+      </PostDate>
       <ContentWrapper>
-        {!props.isLoading && <BodyContainer>{body}</BodyContainer>}
+        {!props.isLoading &&
+          <BodyContainer>
+            {body}
+          </BodyContainer>}
       </ContentWrapper>
     </PageLayout>
   );

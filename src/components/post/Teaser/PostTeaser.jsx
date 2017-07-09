@@ -8,9 +8,7 @@ const PostFooter = styled.footer`
   font-size: 0.8em;
 `;
 
-const Section = styled.section`
-  margin: 0.5em 0;
-`;
+const Section = styled.section`margin: 0.5em 0;`;
 
 type Props = {
   post: Post,
@@ -19,7 +17,7 @@ type Props = {
 const PostTeaser = ({ post }: Props): React.Element<any> => {
   const date = new Date(post.date).toDateString();
   return (
-    <article itemScope itemType="http://schema.org/BlogPosting" role="article">
+    <article itemScope itemType="http://schema.org/BlogPosting">
       <header>
         <h2 itemProp="name">
           {/* eslint-disable no-underscore-dangle */}
@@ -30,10 +28,14 @@ const PostTeaser = ({ post }: Props): React.Element<any> => {
         </h2>
       </header>
       <Section itemProp="description">
-        <p>{post.description}</p>
+        <p>
+          {post.description}
+        </p>
       </Section>
       <PostFooter>
-        <time dateTime={date}>{date}</time>
+        <time dateTime={date}>
+          {date}
+        </time>
       </PostFooter>
     </article>
   );

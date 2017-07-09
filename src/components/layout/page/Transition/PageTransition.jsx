@@ -14,7 +14,7 @@ const ContentWrapper = styled.div`
   margin-top: ${props => `${props.scrollY}px`};
 `;
 
-const PageTransition = ({ path, children }: Props): React.Element<any> => (
+const PageTransition = ({ path, children }: Props): React.Element<any> =>
   <CSSTransitionGroup
     transitionName="fade"
     transitionEnterTimeout={500}
@@ -23,7 +23,6 @@ const PageTransition = ({ path, children }: Props): React.Element<any> => (
     <ContentWrapper key={path}>
       {children}
     </ContentWrapper>
-  </CSSTransitionGroup>
-);
+  </CSSTransitionGroup>;
 
 export default PageTransition;

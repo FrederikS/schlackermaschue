@@ -15,15 +15,12 @@ type Context = {
 };
 
 const ContentContainer = styled.div`
-  padding: 1em 1em;
+  padding: 1em;
   max-width: 35em;
   margin: auto;
 `;
 
-const PageLayout = (
-  props: Props,
-  { metadata: { pkg } }: Context
-): React.Element<any> => {
+const PageLayout = (props: Props, { metadata: { pkg } }: Context): React.Element<any> => {
   const { head, children } = props;
   return (
     <div>
