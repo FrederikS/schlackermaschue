@@ -1,10 +1,11 @@
 {
   "private": true,
   "name": "schlackermaschue",
+  "version": "0.0.1",
   "homepage": "http://www.schlackermaschue.de",
   "twitter": "_axinja_",
   "repository": "",
-  "author": "Frederik Steffen",
+  "author": "Axinja Tannhäuser",
   "email": "mail@abc.de",
   "scripts": {
     "lint:css": "./node_modules/.bin/stylelint \"src/**/*.jsx\"",
