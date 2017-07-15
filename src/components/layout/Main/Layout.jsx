@@ -16,12 +16,13 @@ const Container = styled.div`
 
 type Props = {
   children: React.Element<any>,
+  location: RouteLocation,
 };
 
-const Layout = ({ children }: Props, { metadata: { pkg } }: Context) =>
+const Layout = ({ children, location }: Props, { metadata: { pkg } }: Context) =>
   <Container>
     <DefaultHeadMeta />
-    <Header title={pkg.name} />
+    <Header withHomeLink={location.pathname !== '/'} title={pkg.name} />
     <Content>
       {children}
     </Content>
