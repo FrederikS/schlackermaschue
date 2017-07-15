@@ -15,7 +15,7 @@ type Props = {
 };
 
 const PostTeaser = ({ post }: Props): React.Element<any> => {
-  const date = new Date(post.date).toDateString();
+  const date = new Date(post.date).toLocaleDateString('de');
   return (
     <article itemScope itemType="http://schema.org/BlogPosting">
       <header>

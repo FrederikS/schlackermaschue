@@ -22,7 +22,7 @@ const PostComponent = (props: PageProps): React.Element<any> => {
   return (
     <PageLayout {...props}>
       <PostDate>
-        {new Date(post.date).toDateString()}
+        {new Date(post.date).toLocaleDateString('de')}
       </PostDate>
       <ContentWrapper>
         {!props.isLoading &&
